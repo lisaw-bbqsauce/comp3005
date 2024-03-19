@@ -1,4 +1,4 @@
-package com.comp3000;
+package com.comp3005;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -29,7 +29,7 @@ public class Main {
 
     // CRUD functions
     public void getAllStudents() {
-        String sql = "SELECT * FROM comp3000.students";
+        String sql = "SELECT * FROM comp3005.students";
 
         try (Connection connection = DriverManager.getConnection(url, user, password);
                 Statement statement = connection.createStatement();
@@ -47,7 +47,7 @@ public class Main {
     }
 
     public void addStudent(String first_name, String last_name, String email, Date enrollment_date) {
-        String sql = "INSERT INTO comp3000.students (first_name, last_name, email, enrollment_date) VALUES (?,?,?,?);";
+        String sql = "INSERT INTO comp3005.students (first_name, last_name, email, enrollment_date) VALUES (?,?,?,?);";
 
         try (Connection connection = DriverManager.getConnection(url, user, password);
                 PreparedStatement statement = connection.prepareStatement(sql)) {
@@ -64,7 +64,7 @@ public class Main {
     }
 
     public void updateStudentEmail(int student_id, String new_email) {
-        String sql = "UPDATE comp3000.students SET email = ? WHERE student_id = ?;";
+        String sql = "UPDATE comp3005.students SET email = ? WHERE student_id = ?;";
 
         try (Connection connection = DriverManager.getConnection(url, user, password);
                 PreparedStatement statement = connection.prepareStatement(sql)) {
@@ -79,7 +79,7 @@ public class Main {
     }
 
     public void deleteStudent(int student_id) {
-        String sql = "DELETE FROM comp3000.students WHERE student_id = ?;";
+        String sql = "DELETE FROM comp3005.students WHERE student_id = ?;";
 
         try (Connection connection = DriverManager.getConnection(url, user, password);
                 PreparedStatement statement = connection.prepareStatement(sql)) {
