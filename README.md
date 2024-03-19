@@ -15,3 +15,6 @@ Do update the port and username + password at the top of Main.java if they diffe
 If you are having trouble setting up the database you can run the queries manually in pgAdmin:
 1. Copy + paste the contents of `01.0.sql` into a query editor in pgAdmin
 1. Run!
+
+### Video
+https://youtu.be/2dwoXMiKRxs
